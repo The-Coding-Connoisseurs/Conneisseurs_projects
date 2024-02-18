@@ -1,0 +1,18 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+
+:root {
+    --colour-teal: #037C6E
+}
+
+/* table */
+table {
+    border-collapse: collapse;
+}
+
+tr > *{
+    padding: 0.2rem;
+}
+tr:nth-child(odd) {
+    background-color: var(--colour-teal);
+    color: white
+}

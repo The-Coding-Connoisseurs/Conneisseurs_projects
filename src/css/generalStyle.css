@@ -1,0 +1,35 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+
+:root {
+    --colour-teal: #05998C;
+    --colour-dark-teal: #037C6E; 
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* table */
+table {
+    border-collapse: collapse;
+    font-size: 3rem;
+}
+
+td {
+    padding: 0.4rem 2rem 0.4rem 2rem;
+    text-align: center;
+}
+
+td:nth-child(odd) {
+    background-color: var(--colour-teal);
+}
+
+td:hover {
+    background-color: var(--colour-dark-teal);
+}
+
+td:hover > * {
+    color: white
+}
