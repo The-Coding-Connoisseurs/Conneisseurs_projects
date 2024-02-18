@@ -1,18 +1,60 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 
-:root {
-    --colour-teal: #037C6E
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
 }
 
-/* table */
-table {
-    border-collapse: collapse;
+.loading-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
-tr > *{
-    padding: 0.2rem;
+.progress-bar-container {
+    width: 300px;
+    position: relative;
 }
-tr:nth-child(odd) {
-    background-color: var(--colour-teal);
-    color: white
+
+.progress-bar {
+    height: 20px;
+    background-color: #2ecc71;
+    border-radius: 10px;
+    animation: loadingAnimation 16s linear forwards;
+}
+
+@keyframes loadingAnimation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 400%;
+    }
+}
+
+.percentage-text {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+    animation: fadeIn 1s linear forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
