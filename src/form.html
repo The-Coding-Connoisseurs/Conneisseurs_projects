@@ -8,22 +8,28 @@
 </head>
 <body>
     <p>Inform us</p>
-    <form action="get" style="display: flex; flex-direction: column;">
-        <label for="fname">First Name :</label>
-        <input type="" id="fname" name="fname">
+    <form id="informForm" action="get" style="display: flex; flex-direction: column;">
 
+        <!-- Name imput containing a set of selects for each letter -->
         <label for="lname">Last Name :</label>
-        <input type="" id="lname" name="lname">
+        <div id="lnameContainer"></div>
+
+        <!-- Name imput containing a set of selects for each letter -->
+        <label for="fname">First Name :</label>
+        <div id="fnameContainer"></div>
 
         <label for="address">Address :</label>
         <input type="" id="address" name="address">
 
-        <!-- The phone number containing a number slider -->
+        <!-- Phone number input containing a number slider -->
         <div class="phoneslider-container">
             <label for="phoneslider">Phone number :</label>
             <input type="range" name="phone" id="phoneslider" min="0" max="9999999999">
             <output id="phoneslider-output">0</output>
         </div>
+
+        <!-- Output gets logged to the console -->
+        <button type="button" id="submitForm">Send</button>
     </form>
 
     <script src="/src/js/formScript.js"></script>
