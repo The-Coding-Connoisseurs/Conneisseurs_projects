@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InForm Us</title>
+    <link rel="stylesheet" href="/src/css/formStyle.css">
+</head>
+<body>
+    <p>Inform us</p>
+    <form action="get" style="display: flex; flex-direction: column;">
+        <label for="fname">First Name :</label>
+        <input type="" id="fname" name="fname">
+
+        <label for="lname">Last Name :</label>
+        <input type="" id="lname" name="lname">
+
+        <label for="address">Address :</label>
+        <input type="" id="address" name="address">
+
+        <!-- The phone number containing a number slider -->
+        <div class="phoneslider-container">
+            <label for="phoneslider">Phone number :</label>
+            <input type="range" name="phone" id="phoneslider" min="0" max="9999999999">
+            <output id="phoneslider-output">0</output>
+        </div>
+    </form>
+
+    <script src="/src/js/formScript.js"></script>
+</body>
+</html>
