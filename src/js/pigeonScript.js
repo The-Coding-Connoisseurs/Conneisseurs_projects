@@ -9,17 +9,8 @@ document.getElementById('poopBtn').addEventListener('click', function() {
     poop.style.left = pos.left + 'px';
     poop.style.top = pos.top + 'px';
     
-    poop.style.animation = 'fall 2s ease-in forwards'
+    poop.style.animation = 'fall 2s linear forwards'
 
     container.appendChild(poop);
-
-    const styleSheet = document.styleSheets[0];
-    styleSheet.insertRule(`@keyframes fall {
-        0% {
-            top: ${pos.top}px;
-        }
-        100% {
-            top: 90%;
-        }
-    }`, styleSheet.cssRules.length);
+   
   });

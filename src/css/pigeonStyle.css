@@ -55,9 +55,15 @@ tr:nth-child(odd) {
 
 @keyframes moveVertical {
     0% {
-      top: calc(45% + 10px);
+      top: calc(45% + 40px);
     }
     100% {
-      top: calc(45% - 10px); 
+      top: calc(45% - 40px); 
+    }
+}
+
+@keyframes fall {
+    100% {
+        top: 90%;
     }
 }
