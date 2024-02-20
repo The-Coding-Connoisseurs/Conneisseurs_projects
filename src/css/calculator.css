@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+.calculator-container{
+    background-color: rgb(77, 77, 77);
+    border-radius: 10px;
+}
+
+.calculator-object{
+    margin: 20px 10px 10px 10px;
+}
+
+.screen{
+    background-color: rgb(126, 167, 141);
+    height: 75px;
+    margin: 0px 0px 20px 0px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.screen p{
+    text-align: right;
+    margin-right: 10px;
+}
+
+#calculation{
+    font-size: 1em;
+    margin-top: 5px;
+    margin-block-end: 0em;
+}
+
+#workarea{
+    font-size: 2em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.buttons {   
+    display: flex;
+}
+
+button {
+    width: 75px;
+    height: 75px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    border-radius: 10%;
+}
+
+.numbers button{
+    background-color: rgba(50, 50, 50, 100);
+    color: white;
+    border: none;
+}
+
+.numbers{
+    margin-right: 10px;
+}
+
+.rowA, .rowB{
+    display: flex;
+    margin-bottom: 5px;
+}
+.rowA button:nth-child(2){
+    margin: 0px 5px 0px 5px;
+}
+
+.rowB button:nth-child(2){
+    margin: 0px 0px 0px 5px;
+}
+
+#multiply, #divide, #plus, #minus{
+    background-color: rgb(201, 201, 201);
+    border: none;
+}
+
+#execute, #del, #ac{
+    background-color: rgb(230, 138, 0);
+    border: none;
+    color: white;
+}
+
+#execute{
+    width: 100%;
+    border-radius: 10px;
+}
