@@ -16,3 +16,29 @@ tr:nth-child(odd) {
     background-color: var(--colour-teal);
     color: white
 }
+
+
+.poop{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: brown;
+}
+
+#pigeonObj{
+    width: 20px;
+    height: 20px;
+    background-color: greenyellow;
+    position: absolute;
+    top: 45%;
+    animation: moveRightToLeft 5s linear infinite alternate;
+}
+
+@keyframes moveRightToLeft {
+    0% {
+      left: 90%;
+    }
+    100% {
+      left: 10%; 
+    }
+}
