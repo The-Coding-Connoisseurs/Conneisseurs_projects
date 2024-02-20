@@ -188,31 +188,33 @@ function divisionOperation(a){
 
 function execute(){
     finishPreviousOperation();
-    let r = Math.floor(Math.random() * 3)
+    if(!isFinished) {
+        let r = Math.floor(Math.random() * 3)
 
-    let resultString = "";
-    let shownResult = "";
+        let resultString = "";
+        let shownResult = "";
 
-    if(r == 0){
-        shownResult = getRndInt(result + 1, result + 50);
-        resultString = "less than " + shownResult;
-        console.log(shownResult);
-    }
-    if(r == 1){
-        shownResult = getRndInt(result - 50, result - 1);
-        resultString = "more than " + shownResult;
-        console.log(shownResult);
-    }
-    if(r == 2){
-        shownResult = getRndInt(result - 7, result + 7);
-        resultString = "around " + shownResult;
-        console.log(shownResult);
-    }
-    console.log("actual result " + result)
-    workArea.textContent = resultString;
+        if(r == 0){
+            shownResult = getRndInt(result + 1, result + 50);
+            resultString = "less than " + shownResult;
+            console.log(shownResult);
+        }
+        if(r == 1){
+            shownResult = getRndInt(result - 50, result - 1);
+            resultString = "more than " + shownResult;
+            console.log(shownResult);
+        }
+        if(r == 2){
+            shownResult = getRndInt(result - 7, result + 7);
+            resultString = "around " + shownResult;
+            console.log(shownResult);
+        }
+        console.log("actual result " + result)
+        workArea.textContent = resultString;
 
-    workingNumber = 0;
-    isFinished = true;
+        workingNumber = 0;
+        isFinished = true;
+    }
 }
 
 function getRndInt(min, max) {
