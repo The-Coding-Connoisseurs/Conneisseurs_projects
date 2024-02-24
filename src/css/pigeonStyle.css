@@ -1,43 +1,72 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 
 :root {
-    --colour-teal: #037C6E
+    --colour-teal: #037C6E;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #78cbe4;
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: bold;
 }
 
-/* table */
-table {
-    border-collapse: collapse;
+#pigeonContainer{
+    height: 100vh;
+    background-image: url(../assets/images/background_pigeon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-tr > *{
-    padding: 0.2rem;
-}
-tr:nth-child(odd) {
-    background-color: var(--colour-teal);
-    color: white
-}
-
-#poopBtn{
+#poopButton{
     left: 50%;
-    top: 20%;
-    width: 200px;
-    height: 50px;
+    top: 10%;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.3);
     position: absolute;
+    transition-duration: 200ms;
+    color: brown;
+
+    /* Prevent text selection (with spam clicking). */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
+#poopButton:hover {
+    cursor: pointer;
+    left: calc(50% - 1rem);
+    top: calc(10% - 0.5rem);
+    font-size: 48px;
+}
+#poopButton:active {
+    left: calc(50% - 0.5rem);
+    top: calc(10% - 0.25rem);
+    background-color: rgba(255, 255, 255, 0.8);
+    transition-duration: 50ms;
+    font-size: 40px;
+}
+
 
 .poop{
-    width: 10px;
-    height: 10px;
+    width: 1rem;
+    height: 1rem;
     position: absolute;
-    background-color: brown;
+    /* filter: var(--svg-poop-colour); */
+    fill: brown;
 }
 
 #pigeonObj{
-    width: 20px;
-    height: 20px;
-    background-color: greenyellow;
+    width: 3rem;
+    aspect-ratio: 1/2;
     position: absolute;
-    top: 45%;
+    top: 25%;
+    transform: translateY(-200%);
     animation: moveHorizontal 5s linear infinite alternate,moveVertical 1s ease-in-out  infinite alternate;
     
 }
