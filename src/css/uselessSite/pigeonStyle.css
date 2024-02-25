@@ -17,7 +17,7 @@ body {
 
 #pigeonContainer{
     height: 100vh;
-    background-image: url(../assets/images/background_pigeon.png);
+    background-image: url(/src/assets/images/background_pigeon.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -67,7 +67,9 @@ body {
     position: absolute;
     top: 25%;
     transform: translateY(-200%);
-    animation: moveHorizontal 5s linear infinite alternate,moveVertical 1s ease-in-out  infinite alternate;
+    animation: 
+        moveHorizontal 5s linear infinite alternate,
+        moveVertical 1s ease-in-out  infinite alternate;
     
 }
 
