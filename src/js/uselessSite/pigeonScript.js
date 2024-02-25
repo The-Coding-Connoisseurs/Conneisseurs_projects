@@ -47,7 +47,7 @@ function pigeonPoops() {
 }
 
 function playPoopSound() {
-  const audio = new Audio("assets/audio/poopSound.mp3");
+  const audio = new Audio("/src/assets/audio/poopSound.mp3");
   audio.play();
 }
 
