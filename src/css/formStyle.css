@@ -1,7 +1,12 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 
 :root {
-    --colour-teal: #037C6E
+    --colour-teal: #037C6E;
+    --form-blue: #95B9E4;
+}
+
+body {
+    background-color: var(--form-blue);
 }
 
 /* table */
