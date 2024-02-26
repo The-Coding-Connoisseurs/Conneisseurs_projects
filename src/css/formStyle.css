@@ -2,11 +2,33 @@
 
 :root {
     --colour-teal: #037C6E;
+    /* Form colours - see figma */
     --form-blue: #95B9E4;
+    --form-white: #FFF;
+    --form-off-white: #F3F3F3;
 }
 
 body {
     background-color: var(--form-blue);
+}
+
+input {
+    background-color: var(--form-white);
+    width: fit-content;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+input[type='number'] {
+
+}
+
+/* Id's & classes */
+
+#map {
+    height: 400px;
+    width: 100%;
 }
 
 /* table */
@@ -20,9 +42,4 @@ tr > *{
 tr:nth-child(odd) {
     background-color: var(--colour-teal);
     color: white
-}
-
-#map {
-    height: 400px;
-    width: 100%;
 }
