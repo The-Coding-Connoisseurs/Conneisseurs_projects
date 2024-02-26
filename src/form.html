@@ -19,41 +19,47 @@
 </head>
 <body class="container mt-5 pt-5 mb-5 pb-5  ">
     <h1 class="text-center">Inform us</h1>
-    <form id="informForm" action="get" class="d-flex flex-column gap-3">
+    <form id="informForm" action="get" class="d-flex flex-column gap-4 p-5">
         <!-- Name letters digits -->
-        <div id="name-digits" class="d-flex flex-column gap-3">
+        <div id="name-digits" class="d-flex gap-5">
             <div class="d-flex flex-column gap-1">
-                <label for="lnameDigits">How many letters does your last name contains:</label>
+                <label for="lnameDigits">How many letters does your last name contain:</label>
                 <input type="number" id="last-name-digits" name="last-name-digits" min="2" max="20" placeholder="2">
             </div>
             
             <div class="d-flex flex-column gap-1">
-                <label for="fnameDigits">How many letters does your first name contains:</label>
+                <label for="fnameDigits">How many letters does your first name contain:</label>
                 <input type="number" id="first-name-digits" name="first-name-digits" min="2" max="20" placeholder="2">
             </div>
         </div>
+        <hr>
 
-        <div>
+        <div class="d-flex gap-5">
             <!-- Name imput containing a set of selects for each letter -->
-            <label for="lname">Last Name :</label>
-            <div id="lnameContainer"></div>
+            <div class="d-flex flex-column gap-1">
+                <label for="lname">Last Name :</label>
+                <div id="lnameContainer" class="d-flex gap-2"></div>
+            </div>
     
             <!-- Name imput containing a set of selects for each letter -->
-            <label for="fname">First Name :</label>
-            <div id="fnameContainer"></div>
+            <div class="d-flex flex-column gap-1">
+                <label for="fname">First Name :</label>
+                <div id="fnameContainer" class="d-flex gap-2"></div>
+            </div>
         </div>
+        <hr>
 
-        <div>
+        <div class="d-flex flex-column gap-1">
             <label for="address">Address :</label>
             <!-- <input type="" id="address" name="address"> -->
-            <div id="map">
-            </div>
+            <div id="map"></div>
             <!-- Display user selected address coordinates -->
-            <span id="address-container">Selected address: </span>
+            <span id="address-container" class="mt-2">Selected address: </span>
         </div>
+        <hr>
 
         <!-- Phone number input containing a number slider -->
-        <div class="phoneslider-container">
+        <div class="phoneslider-container d-flex flex-column gap-1">
             <label for="phoneslider">Phone number :</label>
             <input type="range" name="phone" id="phoneslider" min="0" max="9999999999">
             <output id="phoneslider-output">0</output>

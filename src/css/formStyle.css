@@ -6,15 +6,18 @@
     --form-blue: #95B9E4;
     --form-white: #FFF;
     --form-off-white: #F3F3F3;
+    --form-light-green: #BCD6AB;
+    --form-dark-green: #6E875E;
 }
 
 body {
     background-color: var(--form-blue);
+    font-size: 1.1em;
 }
 
 input {
     background-color: var(--form-white);
-    width: fit-content;
+    width: 100%;
     border: none;
     border-radius: 8px;
     padding: 8px 16px;
@@ -24,11 +27,33 @@ input[type='number'] {
 
 }
 
-/* Id's & classes */
+select {
+    background-color: var(--form-white);
+    border-radius: 8px;
+    padding: 8px 8px;
+    border: none;
+}
 
+/* Id's & classes */
 #map {
-    height: 400px;
-    width: 100%;
+    height: 600px;
+    /* width: 80%; */
+    border-radius: 8px;
+}
+
+#phoneslider {
+    width: 80%;
+}
+
+#submitForm {
+    width: fit-content;
+    padding: 8px 40px;
+    border-radius: 16px;
+    background-color: var(--form-light-green);
+    border-color: var(--form-dark-green);
+    color: var(--form-dark-green);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 /* table */
