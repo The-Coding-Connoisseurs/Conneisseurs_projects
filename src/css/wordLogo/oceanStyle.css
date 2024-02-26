@@ -11,7 +11,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
     /* Clip path of text and image in background. */
-    background-image: url("/src/assets/images/sea_water_horizon.jpg");
+    background-image: url("../../assets/images/sea_water_horizon.jpg");
     background-size: cover;
     /* Needs webkit prefix. */
     background-clip: text;

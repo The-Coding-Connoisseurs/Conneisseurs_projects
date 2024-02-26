@@ -17,7 +17,7 @@ body {
 
 #pigeonContainer{
     height: 100vh;
-    background-image: url(/src/assets/images/background_pigeon.png);
+    background-image: url(../../assets/images/background_pigeon.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
