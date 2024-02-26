@@ -80,6 +80,6 @@ nameDigitsContainer.addEventListener('change', () => {
 
 // Load functions when content is loaded
 window.addEventListener("DOMContentLoaded", (event) => {
-    // populateNameInputs();
+    populateNameInputs(2, 2);
     populatePhoneSlider();
 });
