@@ -78,18 +78,21 @@ nameDigitsContainer.addEventListener('change', () => {
 
 });
 
-// Leaflet Maps
-// map.js
-var map = L.map('map').setView([0, 0], 2); // Centered at [latitude, longitude] with zoom level 2
+/* *************************************************************** *
+ *                          LEAFLET MAPS CODE
+ * *************************************************************** */
+let map = L.map('map').setView([0, 0], 2);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
 map.on('click', function(event) {
-    var clickedLocation = event.latlng;
+    let clickedLocation = event.latlng;
     console.log('Clicked location: ' + clickedLocation.lat + ', ' + clickedLocation.lng);
-    // You can use these coordinates to display the selected location on the map or perform other actions
+
+    const addressContainer = document.querySelector('#address-container');
+    addressContainer.textContent = 'Selected address: ' + clickedLocation.lat + ', ' + clickedLocation.lng;
 });
 
 // Load functions when content is loaded
