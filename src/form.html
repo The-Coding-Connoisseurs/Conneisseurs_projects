@@ -12,7 +12,12 @@
 <body class="container mt-5 pt-5">
     <h1 class="text-center">Inform us</h1>
     <form id="informForm" action="get" style="display: flex; flex-direction: column;">
-
+        <!-- Name letters digits -->
+        <label for="lnameDigits">How many letters does your last name contains:</label>
+        <input type="number" id="last-name-digits" min="2" max="20" placeholder="2">
+        
+        <label for="fnameDigits">How many letters does your first name contains:</label>
+        <input type="number" id="first-name-digits" min="2" max="20" placeholder="2">
         <!-- Name imput containing a set of selects for each letter -->
         <label for="lname">Last Name :</label>
         <div id="lnameContainer"></div>

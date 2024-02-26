@@ -66,8 +66,9 @@ function submitForm() {
 const submitButton = document.getElementById('submitForm');
 submitButton.addEventListener('click', submitForm);
 
-
-
-populateNameInputs();
-populatePhoneSlider();
+// Load functions when content is loaded
+addEventListener("DOMContentLoaded", (event) => {
+    populateNameInputs();
+    populatePhoneSlider();
+});
 
