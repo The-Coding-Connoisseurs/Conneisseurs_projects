@@ -12,7 +12,13 @@
 
 body {
     background-color: var(--form-blue);
-    font-size: 1.1em;
+    font-size: 1.15em;
+    color: var(--form-white);
+}
+
+label {
+    font-weight: 600;
+    
 }
 
 input {
