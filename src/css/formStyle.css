@@ -21,3 +21,8 @@ tr:nth-child(odd) {
     background-color: var(--colour-teal);
     color: white
 }
+
+#map {
+    height: 400px;
+    width: 100%;
+}

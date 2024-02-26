@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <!-- CSS link -->
     <link rel="stylesheet" href="./css/formStyle.css">
+    <!-- Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Include Leaflet Control Geocoder plugin CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <!-- Include Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Include Leaflet Control Geocoder plugin JavaScript -->
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
 </head>
 <body class="container mt-5 pt-5">
     <h1 class="text-center">Inform us</h1>
@@ -30,7 +38,8 @@
         <div id="fnameContainer"></div>
 
         <label for="address">Address :</label>
-        <input type="" id="address" name="address">
+        <!-- <input type="" id="address" name="address"> -->
+        <div id="map"></div>
 
         <!-- Phone number input containing a number slider -->
         <div class="phoneslider-container">
