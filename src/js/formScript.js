@@ -1,10 +1,11 @@
+'use strict';
+
 // construct Capital Alhpabet
 const alphabetObj = {}
 for (let i = 65; i <= 90; i++) {
     const letter = String.fromCharCode(i);
     alphabetObj[letter] = letter;
 }
-
 
 function populatePhoneSlider() {
 
@@ -16,14 +17,12 @@ function populatePhoneSlider() {
     });
 }
 
-
-function populateNameInputs() {
+function populateNameInputs(lastNameDigits, firstNameDigits) {
     const fnameContainer = document.getElementById('fnameContainer');
     const lnameContainer = document.getElementById('lnameContainer')
 
-
-    addLetterInputs(4, fnameContainer, "fname");
-    addLetterInputs(8, lnameContainer, "lname")
+    addLetterInputs(firstNameDigits, fnameContainer, "fname");
+    addLetterInputs(lastNameDigits, lnameContainer, "lname");
 }
 
 function addLetterInputs(amount, container, name) {
@@ -32,7 +31,7 @@ function addLetterInputs(amount, container, name) {
     container.innerHTML = '';
 
     for (let index = 0; index < amount; index++) {
-        
+
     const select = document.createElement('select');
     select.setAttribute('id', `${name}${index}`);
     select.setAttribute('name',`${name}${index}`);
@@ -59,16 +58,28 @@ function submitForm() {
         jsonData[key] = value;
     });
 
-
     console.log(jsonData);
 }
 
 const submitButton = document.getElementById('submitForm');
 submitButton.addEventListener('click', submitForm);
 
-// Load functions when content is loaded
-addEventListener("DOMContentLoaded", (event) => {
-    populateNameInputs();
-    populatePhoneSlider();
+const nameDigitsContainer = document.querySelector('#name-digits');
+
+nameDigitsContainer.addEventListener('change', () => {
+    // Store name digits based on the user input
+    const lnameDigits = document.querySelector('#last-name-digits');
+    const fnameDigits = document.querySelector('#first-name-digits');
+    
+    // Pass the value of the input fiels to the populate function
+    populateNameInputs(lnameDigits.value, fnameDigits.value);
+
+    console.log(lnameDigits.value + ', ' + fnameDigits.value);
+
 });
 
+// Load functions when content is loaded
+window.addEventListener("DOMContentLoaded", (event) => {
+    // populateNameInputs();
+    populatePhoneSlider();
+});
