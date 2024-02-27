@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technically correct calculator</title>
+    <link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <link rel="stylesheet" href="../../css/uselessSite/calculator.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+</head>
+<body>
+    <h1>Technically correct calculator</h1>
+    <div class="calculator-container">
+        <div class="calculator-object">
+            <div class="screen">
+                <p id="calculation">0</p>
+                <p id="workarea">0</p>
+            </div>
+
+            <div class="buttons">
+                <div class="numbers">
+                    <div class="rowA">
+                        <button class="numeral" id="7" onclick="addNumber(7)">7</button>
+                        <button class="numeral" id="8" onclick="addNumber(8)">8</button>
+                        <button class="numeral" id="9" onclick="addNumber(9)">9</button>
+                    </div>
+                    <div class="rowA">
+                        <button class="numeral" id="4" onclick="addNumber(4)">4</button>
+                        <button class="numeral" id="5" onclick="addNumber(5)">5</button>
+                        <button class="numeral" id="6" onclick="addNumber(6)">6</button>
+                    </div>
+                    <div class="rowA">
+                        <button class="numeral" id="1" onclick="addNumber(1)">1</button>
+                        <button class="numeral" id="2" onclick="addNumber(2)">2</button>
+                        <button class="numeral" id="3" onclick="addNumber(3)">3</button>
+                    </div>
+                    <div class="rowA">
+                        <button class="numeral" id="0" onclick="addNumber(0)">0</button>
+                        <button id="comma" onclick="addNumber('.')">&period;</button>
+                        <button id="posneg" onclick="posneg()">&plus; &sol; &minus; </button>
+                    </div>
+                </div>
+
+                <div class="operators">
+                    <div class="rowB">
+                        <button id="del" onclick="deleteNumeral()">DEL</button>
+                        <button id="ac" onclick="allClear()">AC</button>
+                    </div>
+                    <div class="rowB">
+                        <button id="multiply" onclick="pressOperation('times')">&times;</button>
+                        <button id="divide" onclick="pressOperation('divide')">&divide;</button>
+                    </div>
+                    <div class="rowB">
+                        <button id="plus" onclick="pressOperation('plus')">&plus;</button>
+                        <button id="minus" onclick="pressOperation('minus')">&minus;</button>
+                    </div>
+                    <Button id="execute" onclick="execute()">&equals;</Button>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <script src="../../js/uselessSite/calculator.js"></script>
+</body>
+</html>

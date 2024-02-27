@@ -1,0 +1,146 @@
+
+
+* {
+     background-color: antiquewhite;
+    font-family: 'Roboto';
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+
+
+#word > h1{
+    display: flex;
+    font-size: 11vw;
+    height: 11vw;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#computer-icon{
+    height: 73%;
+    aspect-ratio: 0.8;
+    margin: 10% 1%;
+}
+
+#c-housing{
+    border-radius: 3%;
+    background-color:#B6AC8B;
+    padding: 15%;
+    height: 75%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 0.3vw 0vw 0vw 0.4vw;
+    border-color:   #998d7c rgb(192, 181, 164) rgb(163, 153, 138) #7c7263;
+  
+}
+
+#c-screen {
+    background-color: gray;
+    border-radius: 5%;
+    width: 100%;
+    aspect-ratio: 1.2;
+    animation: bootup 10s infinite;
+    border-style: solid;
+    border-width: 0.2vw 0.4vw 0.2vw 0.4vw;
+    border-color:   #998d7c rgb(192, 181, 164) rgb(163, 153, 138) #7c7263;
+}
+
+
+#c-btn{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 10%;
+    margin-top: 10%;
+    background-color: inherit;
+    
+    
+}
+
+#c-btn-content {
+    height: 100%;
+    width: 40%;
+    background-color: red;
+    
+    animation: startup 10s infinite;
+    border-style: solid;
+    border-width: 0.1vw 0.2vw 0.1vw 0.2vw;
+    border-color:   #998d7c rgb(192, 181, 164) rgb(163, 153, 138) #7c7263;
+    
+}
+
+@keyframes startup {
+    0%, 19.9% {
+        background-color: red; 
+    }
+    20% {
+        background-color: black;
+    }
+    25%{
+            background-color: rgb(221, 107, 0);
+    }
+    30% {
+        background-color: black;
+    }
+    35%{
+            background-color: rgb(221, 107, 0);
+    }
+    40% {
+        background-color: black;
+    }
+    45%{
+            background-color: rgb(221, 107, 0);
+    }
+    50% {
+        background-color: black;
+    }
+    55%{
+            background-color: rgb(221, 107, 0);
+    }
+    60% {
+        background-color: black;
+    }
+    65%{
+            background-color: rgb(221, 107, 0);
+    }
+    70% {
+        background-color: black;
+    }
+    75%{
+            background-color: rgb(221, 107, 0);
+    }
+    79.9%{
+        background-color: black;
+    }
+    85%, 100% {
+        background-color: rgb(31, 167, 53); 
+    }
+}
+
+
+@keyframes bootup {
+    0%, 19.9% {
+        background-color: grey; 
+    }
+    30%,79.9%{
+        background-color: rgb(139, 164, 202)
+    }
+     100% {
+        background-color: rgb(25, 0, 253); 
+    }
+}
+
+

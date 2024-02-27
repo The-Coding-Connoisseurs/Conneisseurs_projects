@@ -1,0 +1,100 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+
+:root {
+    --colour-teal: #037C6E;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #78cbe4;
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#pigeonContainer{
+    height: 100vh;
+    background-image: url(../../assets/images/background_pigeon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#poopButton{
+    left: 50%;
+    top: 10%;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    transition-duration: 200ms;
+    color: brown;
+
+    /* Prevent text selection (with spam clicking). */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+#poopButton:hover {
+    cursor: pointer;
+    left: calc(50% - 1rem);
+    top: calc(10% - 0.5rem);
+    font-size: 48px;
+}
+#poopButton:active {
+    left: calc(50% - 0.5rem);
+    top: calc(10% - 0.25rem);
+    background-color: rgba(255, 255, 255, 0.8);
+    transition-duration: 50ms;
+    font-size: 40px;
+}
+
+
+.poop{
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    /* filter: var(--svg-poop-colour); */
+    fill: brown;
+}
+
+#pigeonObj{
+    width: 3rem;
+    aspect-ratio: 1/2;
+    position: absolute;
+    top: 25%;
+    transform: translateY(-200%);
+    animation: 
+        moveHorizontal 5s linear infinite alternate,
+        moveVertical 1s ease-in-out  infinite alternate;
+    
+}
+
+
+@keyframes moveHorizontal {
+    0% {
+      left: 90%;
+    }
+    100% {
+      left: 10%; 
+    }
+}
+
+
+@keyframes moveVertical {
+    0% {
+      top: calc(45% + 40px);
+    }
+    100% {
+      top: calc(45% - 40px); 
+    }
+}
+
+@keyframes fall {
+    100% {
+        top: 90%;
+    }
+}
