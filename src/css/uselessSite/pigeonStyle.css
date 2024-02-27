@@ -83,6 +83,12 @@ button{
     fill: brown;
 }
 #pigeonStatic{
+    background-image: url(/src/assets/images/pigeon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
     width: 3rem;
     aspect-ratio: 1/2;
     position: fixed;
@@ -93,9 +99,13 @@ button{
 }
 
 #pigeonObj{
-    /* ADDED */
+    background-image: url(/src/assets/images/FlyingPigeon2.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
     display: none;
-    /*---*/
 
     width: 7rem;
     height: 7rem;
