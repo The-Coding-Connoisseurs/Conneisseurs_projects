@@ -35,6 +35,9 @@ function pigeonFly() {
   document.getElementById('poopButton').style.display = 'block';
 }
 
+
+ 
+
 /* ---- */
 
 //* Event listeners for different types of ways to trigger.
@@ -54,31 +57,15 @@ document.body.onkeyup = function(event) {
 }
 };
 
-const offset = Math.floor(Math.random() * 10) 
-console.log('[debug]', "8" + offset);
-
-poop.animate(
-  [
-    {
-
-    },
-    {
-      top: "8" + offset+ '%'
-    }
-  ],
-  {
-    duration: 2000,
-    fill: "forwards"
-  }
-)
-
 // Main function
 function pigeonPoops() {
   playPoopSound();
   const poop = createPoop();
   placeElmentInCenterOf(pigeon, poop);
   // poop.style.animation = 'fall 2s linear forwards'
+
   const offset = Math.floor(Math.random() * 10) 
+  console.log('[debug]', "8" + offset);
   
   poop.animate(
     [
@@ -86,7 +73,7 @@ function pigeonPoops() {
 
       },
       {
-        top: "8" + offset + '%'
+        top: "8" + offset+ '%'
       }
     ],
     {
@@ -99,7 +86,7 @@ function pigeonPoops() {
 }
 
 function playPoopSound() {
-  const audio = new Audio("/src/assets/audio/poopSound.mp3");
+  const audio = new Audio("./assets/audio/poopSound.mp3");
   audio.play();
 }
 
@@ -117,3 +104,8 @@ function placeElmentInCenterOf(targetElement, placedElement) {
   placedElement.style.top = position.top + (targetElement.height / 2) + 'px';
   return placedElement;
 }
+
+// addAnimation{
+//   @keyframes 
+// }
+
