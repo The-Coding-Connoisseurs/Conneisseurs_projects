@@ -1,3 +1,48 @@
 * {
     background-color: antiquewhite;
 }
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+#galaxy-content{
+width: 400px;
+height: 400px;
+background-color: red;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.circle{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+border-radius: 50%;
+animation: xAxis 2.5s infinite alternate, yAxis 2.5s infinite alternate;
+}
+  
+  @keyframes xAxis {
+    50%{
+        transform: translateY(-10px);
+        transform: translateX(50px);
+    }
+    100% {
+      transform: translateX(50px);
+    }
+  }
+  
+  @keyframes yAxis {
+    50%{
+        transform: translateX(10px);
+        transform: translateY(-50px);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
