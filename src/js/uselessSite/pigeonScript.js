@@ -54,12 +54,46 @@ document.body.onkeyup = function(event) {
 }
 };
 
+const offset = Math.floor(Math.random() * 10) 
+console.log('[debug]', "8" + offset);
+
+poop.animate(
+  [
+    {
+
+    },
+    {
+      top: "8" + offset+ '%'
+    }
+  ],
+  {
+    duration: 2000,
+    fill: "forwards"
+  }
+)
+
 // Main function
 function pigeonPoops() {
   playPoopSound();
   const poop = createPoop();
   placeElmentInCenterOf(pigeon, poop);
-  poop.style.animation = 'fall 2s linear forwards'
+  // poop.style.animation = 'fall 2s linear forwards'
+  const offset = Math.floor(Math.random() * 10) 
+  
+  poop.animate(
+    [
+      {
+
+      },
+      {
+        top: "8" + offset + '%'
+      }
+    ],
+    {
+      duration: 2000,
+      fill: "forwards"
+    }
+  )
 
   poopContainer.appendChild(poop);
 }
