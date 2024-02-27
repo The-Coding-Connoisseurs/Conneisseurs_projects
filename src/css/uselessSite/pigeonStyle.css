@@ -17,12 +17,31 @@ body {
 
 #pigeonContainer{
     height: 100vh;
-    background-image: url(../../assets/images/background_pigeon.png);
+    background-image: url(/src/assets/images/background_pigeon.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
 }
+
+/* ADDED */
+button{
+    width: 120px;
+    height: 50px;
+    background-color: greenyellow;
+    border: 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    
+}
+/* ---- */
 
 #poopButton{
     left: 50%;
@@ -32,6 +51,9 @@ body {
     position: absolute;
     transition-duration: 200ms;
     color: brown;
+    /* ADDED */
+    display: none;
+    /*---*/
 
     /* Prevent text selection (with spam clicking). */
     -webkit-user-select: none; /* Safari */
@@ -60,9 +82,23 @@ body {
     /* filter: var(--svg-poop-colour); */
     fill: brown;
 }
+#pigeonStatic{
+    width: 3rem;
+    aspect-ratio: 1/2;
+    position: fixed;
+    top: 40%;
+    left: 85%;
+    transform: translateX(-50%);
+
+}
 
 #pigeonObj{
-    width: 3rem;
+    /* ADDED */
+    display: none;
+    /*---*/
+
+    width: 7rem;
+    height: 7rem;
     aspect-ratio: 1/2;
     position: absolute;
     top: 25%;
