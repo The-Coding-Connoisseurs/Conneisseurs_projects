@@ -17,7 +17,7 @@ body {
 
 #pigeonContainer{
     height: 100vh;
-    background-image: url(/src/assets/images/background_pigeon.png);
+    background-image: url(../../assets/images/PIGEON.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -83,7 +83,7 @@ button{
     fill: brown;
 }
 #pigeonStatic{
-    background-image: url(/src/assets/images/pigeon.png);
+    background-image: url(../../assets/images/PIGEON.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -99,7 +99,7 @@ button{
 }
 
 #pigeonObj{
-    background-image: url(/src/assets/images/FlyingPigeon2.gif);
+    background-image: url(../../assets/images/FlyingPigeon2.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
