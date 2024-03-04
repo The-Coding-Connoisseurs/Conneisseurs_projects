@@ -3,15 +3,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-h1 {
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* h1 {
     font-size: 35vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
     /* Clip path of text and image in background. */
-    background-image: url("/src/assets/images/sea_water_horizon.jpg");
+    background-image: url("../../assets/images/sea_water_horizon.jpg");
     background-size: cover;
     /* Needs webkit prefix. */
     background-clip: text;
@@ -22,14 +30,14 @@ h1 {
     /* Move the background image up and down like a wave. */
     animation: waveWater 3s ease-in-out infinite;
     background-position-Y: -1rem;
-
 }
+
 p.concept {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-top: 1rem;
-}
+} */
 
 @keyframes waveWater {
     50% {
