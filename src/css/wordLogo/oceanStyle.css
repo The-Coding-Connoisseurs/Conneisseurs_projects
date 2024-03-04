@@ -7,7 +7,8 @@
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: end;
     align-items: center;
     min-height: 100vh;
     background: #000;
@@ -15,14 +16,17 @@ body {
 
 .word-content {
     position: relative;
-
 }
 
 .word-content h2 {
     position: absolute;
     color: #fff;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     font-size: 16em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .word-content h2:nth-child(1) {
@@ -33,6 +37,13 @@ body {
 .word-content h2:nth-child(2) {
     color: blue;
     animation: animate 4s ease-in-out infinite;
+}
+
+.bottom-waves {
+    background-color: blue;
+    animation: animate 4s ease-in-out infinite;
+    width: 100vw;
+    height: 400px;
 }
 
 @keyframes animate {
