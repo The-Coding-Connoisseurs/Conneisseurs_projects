@@ -1,3 +1,9 @@
+:root {
+    --wave-gradient-one-1: linear-gradient(90deg, rgba(27,38,59,1) 0%, rgba(65,90,119,1) 100%);
+    --wave-gradient-one-2: linear-gradient(90deg, rgba(119,141,169,1) 0%, rgba(22,105,122,1) 100%);
+    --wave-gradient-one-3: linear-gradient(90deg, rgba(72,159,181,1) 0%, rgba(130,192,204,1) 100%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +17,7 @@ body {
     justify-content: end;
     align-items: center;
     min-height: 100vh;
-    background: #000;
+    background: whitesmoke;
 }
 
 .word-content {
@@ -20,7 +26,6 @@ body {
 
 .word-content h2 {
     position: absolute;
-    color: #fff;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -29,11 +34,11 @@ body {
 
 .word-content h2:nth-child(1) {
     color: transparent;
-    -webkit-text-stroke: 2px blue;
+    -webkit-text-stroke: 6px rgb(27,38,59);
 }
 
 .word-content h2:nth-child(2) {
-    color: blue;
+    color: rgb(27,38,59);
     animation: animate-1 4s ease-in-out infinite;
 }
 
@@ -43,26 +48,29 @@ body {
 }
 
 .wave-1 {
-    background-color: blue;
+    background: var(--wave-gradient-one-1);
     animation: animate-1 4s ease-in-out infinite;
+    opacity: .98;
 }
 
 .wave-2 {
-    background-color: red;
+    background: var(--wave-gradient-one-2);
     animation: animate-2 4s ease-in-out infinite;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    opacity: .96;
 }
 
-.wave-3 {
-    background-color: green;
+.wave-3 { 
+    background: var(--wave-gradient-one-3);
     animation: animate-3 4s ease-in-out infinite;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    opacity: .94;
 }
 
 @keyframes animate-1 {
@@ -81,7 +89,7 @@ body {
     }
 
     50% {
-        clip-path: polygon(0 55%, 16% 58%, 33% 60%, 49% 56%, 64% 54%, 81% 53%, 100% 54%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 55%, 16% 58%, 33% 60%, 49% 56%, 64% 54%, 81% 60%, 100% 54%, 100% 100%, 0% 100%);
     }
 }
 
