@@ -127,7 +127,7 @@ span{
 }
 #oval{
     width: 150px;
-	height: 80px;
+	height: 85px;
 	border: 4px solid aqua;
 	border-radius: 50%;
 	position: relative;
@@ -137,7 +137,7 @@ span{
     }
 #oval2{
     width: 150px;
-	height: 80px;
+	height: 85px;
 	border: 4px solid aqua;
 	border-radius: 50%;
 	position: absolute;
@@ -219,7 +219,7 @@ p.orbit {
     }
     span {
         margin-left: 1rem;
-        margin-right: 1rem;
+        margin-right: 2rem;
     }
     #oval{
         scale: 1.5;
