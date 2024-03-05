@@ -2,6 +2,7 @@
     --wave-gradient-one-1: linear-gradient(90deg, rgba(27,38,59,1) 0%, rgba(65,90,119,1) 100%);
     --wave-gradient-one-2: linear-gradient(90deg, rgba(119,141,169,1) 0%, rgba(22,105,122,1) 100%);
     --wave-gradient-one-3: linear-gradient(90deg, rgba(72,159,181,1) 0%, rgba(130,192,204,1) 100%);
+    --bg-gradient: linear-gradient(0deg, rgba(215,192,153,1) 0%, rgba(237,135,28,1) 100%);
 }
 
 * {
@@ -14,10 +15,10 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: end;   
     align-items: center;
     min-height: 100vh;
-    background: whitesmoke;
+    background: var(--bg-gradient);
 }
 
 .word-content {
