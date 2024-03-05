@@ -14,7 +14,7 @@
 
 body {
     display: flex;
-<<<<<<< HEAD
+
     flex-direction: column;
     justify-content: end;   
     align-items: center;
@@ -35,17 +35,7 @@ body {
 }
 
 .word-content h2:nth-child(1) {
-=======
-    flex-direction: row;
-    justify-content: center;
-    /* Clip path of text and image in background. */
-    background-image: url("../../assets/images/sea_water_horizon.jpg");
-    background-size: cover;
-    /* Needs webkit prefix. */
-    background-clip: text;
-    -webkit-background-clip: text;
-    /* The image is cut out under the text, so taxt must be transparant. */
->>>>>>> main
+
     color: transparent;
     -webkit-text-stroke: 4px #F5F9FF;
 }
