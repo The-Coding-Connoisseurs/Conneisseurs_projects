@@ -131,3 +131,42 @@ body {
         clip-path: polygon(0 54%, 18% 58%, 34% 59%, 52% 54%, 66% 57%, 83% 57%, 100% 55%, 100% 100%, 0% 100%);
     }
 }
+
+/* Responsive style */
+@media (max-width: 1231px) {
+    .word-content h2 {
+        font-size: 20em;
+    }
+
+    .wave {
+        height: 480px;
+    }
+}
+
+@media (max-width: 1025px) {
+    .word-content h2 {
+        font-size: 14em;
+    }
+
+    .boat, .shark-fin, .lifebuoy {
+        bottom: 40px;
+    }
+
+    .wave {
+        height: 350px;
+    }
+}
+
+@media (max-width: 718px) {
+    .word-content h2 {
+        font-size: 8em;
+    }
+
+    .boat, .shark-fin, .lifebuoy {
+        bottom: 24px !important;
+    }
+
+    .wave {
+        height: 200px;
+    }
+}
