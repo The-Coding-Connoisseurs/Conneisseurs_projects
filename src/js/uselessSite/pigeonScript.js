@@ -19,27 +19,6 @@ c-26.9-2.7-53.8-8-80.1-14.3c-19.1-4.6-35.5-15.7-48-31.6c-19.9-25.4-16.4-55.2,10-
 </svg>`
 
 
-/* START FLYING PIGEON */
-document.getElementById('flyButton').addEventListener('click', event => {
-  pigeonFly();
-  console.log('Fly button clicked');
-});
-
-function pigeonFly() {
-  document.getElementById('pigeonObj').style.display = 'block';
-
-  document.getElementById('pigeonStatic').style.display = 'none';
-
-  document.getElementById('flyButton').style.display = 'none';
-
-  document.getElementById('poopButton').style.display = 'block';
-}
-
-
- 
-
-/* ---- */
-
 //* Event listeners for different types of ways to trigger.
 // By clicking the pigeon.
 document.getElementById('pigeonObj').addEventListener('click', event => {
@@ -62,31 +41,13 @@ function pigeonPoops() {
   playPoopSound();
   const poop = createPoop();
   placeElmentInCenterOf(pigeon, poop);
-  // poop.style.animation = 'fall 2s linear forwards'
-
-  const offset = Math.floor(Math.random() * 10) 
-  console.log('[debug]', "8" + offset);
-  
-  poop.animate(
-    [
-      {
-
-      },
-      {
-        top: "8" + offset+ '%'
-      }
-    ],
-    {
-      duration: 2000,
-      fill: "forwards"
-    }
-  )
+  poop.style.animation = 'fall 2s linear forwards'
 
   poopContainer.appendChild(poop);
 }
 
 function playPoopSound() {
-  const audio = new Audio("../../assets/audio/poopSound.mp3");
+  const audio = new Audio("/src/assets/audio/poopSound.mp3");
   audio.play();
 }
 
@@ -104,8 +65,3 @@ function placeElmentInCenterOf(targetElement, placedElement) {
   placedElement.style.top = position.top + (targetElement.height / 2) + 'px';
   return placedElement;
 }
-
-// addAnimation{
-//   @keyframes 
-// }
-

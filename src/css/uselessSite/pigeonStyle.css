@@ -17,31 +17,12 @@ body {
 
 #pigeonContainer{
     height: 100vh;
-    background-image: url(../../assets/images/background_pigeon.png);
+    background-image: url(/src/assets/images/background_pigeon.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
 }
-
-/* ADDED */
-button{
-    width: 120px;
-    height: 50px;
-    background-color: greenyellow;
-    border: 1px solid white;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    position: fixed;
-    left: 50%;
-    bottom: 20px;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-    
-}
-/* ---- */
 
 #poopButton{
     left: 50%;
@@ -51,9 +32,6 @@ button{
     position: absolute;
     transition-duration: 200ms;
     color: brown;
-    /* ADDED */
-    display: none;
-    /*---*/
 
     /* Prevent text selection (with spam clicking). */
     -webkit-user-select: none; /* Safari */
@@ -76,62 +54,42 @@ button{
 
 
 .poop{
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1rem;
+    height: 1rem;
     position: absolute;
     /* filter: var(--svg-poop-colour); */
     fill: brown;
 }
-#pigeonStatic{
-    width: 3rem;
-    aspect-ratio: 1/2;
-    position: fixed;
-    top: 40%;
-    left: 85%;
-    transform: translateX(-50%);
-
-}
 
 #pigeonObj{
-    /* ADDED */
-    display: none;
-    /*---*/
-
-    width: 7rem;
-    height: 7rem;
+    width: 3rem;
     aspect-ratio: 1/2;
     position: absolute;
-    top: 40%;
+    top: 25%;
     transform: translateY(-200%);
-    left: 85%;
     animation: 
-        moveHorizontal 10s linear infinite forwards,
-        moveVertical 2s ease-in-out infinite alternate;
+        moveHorizontal 5s linear infinite alternate,
+        moveVertical 1s ease-in-out  infinite alternate;
     
 }
 
 
 @keyframes moveHorizontal {
-    from {transform: scaleX(1);}
-    50% {
+    0% {
+      left: 90%;
+    }
+    100% {
       left: 10%; 
-      transform: scaleX(1);
-    }
-    51% {
-        transform: scaleX(-1);
-    }
-    to {
-        transform: scaleX(-1);
     }
 }
 
 
 @keyframes moveVertical {
-    /* 0% {
+    0% {
       top: calc(45% + 40px);
-    } */
-    50% {
-      top: calc(30% - 40px); 
+    }
+    100% {
+      top: calc(45% - 40px); 
     }
 }
 
