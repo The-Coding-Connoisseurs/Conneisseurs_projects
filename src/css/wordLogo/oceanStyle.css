@@ -8,7 +8,6 @@
 h1 {
     font-size: 35vw;
     display: flex;
-<<<<<<< HEAD
     flex-direction: row;
     justify-content: center;
     /* Clip path of text and image in background. */
@@ -18,28 +17,6 @@ h1 {
     background-clip: text;
     -webkit-background-clip: text;
     /* The image is cut out under the text, so taxt must be transparant. */
-=======
-    flex-direction: column;
-    justify-content: end;   
-    align-items: center;
-    min-height: 100vh;
-    background: var(--bg-gradient);
-}
-
-.word-content {
-    position: relative;
-}
-
-.word-content h2 {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24em;
-}
-
-.word-content h2:nth-child(1) {
->>>>>>> parent of 759d0af (merge ocean into main)
     color: transparent;
     
     /* Move the background image up and down like a wave. */
