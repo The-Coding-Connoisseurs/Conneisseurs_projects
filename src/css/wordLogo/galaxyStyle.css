@@ -33,19 +33,24 @@ section h2{
     color: transparent;
     font-weight: 900;
     font-size: 12vw;
+    align-items: center;
     letter-spacing: 1rem;
     -webkit-text-stroke: 0.2px #fff;
     display: flex;
     margin-left: 20px;
     animation: galaxy 5s linear;
+    position: relative;
 }
+
 /* KEYFRAME WORD APPEAR */
 @keyframes galaxy {
     0%{
-        font-size: 0vw;
+        /* font-size: 0vw; */
+        transform: scale(0.1);
     }
     100%{
-        font-size: 12vw;
+        /* font-size: 12vw; */
+        transform: scale(1);
     }
 }
 /* STARS BACKGROUND */
@@ -115,7 +120,7 @@ section .star.star8{
 /* ORBIT OVALS */
 span{
     display: flex;
-    padding-top: 30px;
+    align-items: center;
 }
 #oval{
     width: 150px;
@@ -123,25 +128,23 @@ span{
 	border: 4px solid aqua;
 	border-radius: 50%;
 	position: relative;
-	margin: 20px;
     rotate: 45deg;
     /* opacity: 0; */
     animation: opacity 4s linear;
-}
+    }
 #oval2{
     width: 150px;
 	height: 80px;
 	border: 4px solid aqua;
 	border-radius: 50%;
 	position: absolute;
-	margin: 20px;
     rotate: -45deg;
     /* opacity: 0; */
     animation: opacity 4s linear;
 }
 
 @keyframes opacity {
-    0%, 90%{
+    0%, 80%{
         opacity: 0;
     }
     100%{
@@ -198,11 +201,12 @@ p{
 @media screen and (max-width: 768px){
     section h2{
         font-size: 8vw;
+        letter-spacing: 0.5rem;
     }
     span{
+        margin: -2.5rem;
         scale: 0.5;
         padding: 0;
-        margin: 0;
     }
 }
 
@@ -210,7 +214,10 @@ p{
     section h2{
         font-size: 12vw;
     }
-
+    span {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
     #oval{
         scale: 1.5;
         padding-top: 40px;
