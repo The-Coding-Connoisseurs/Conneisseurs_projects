@@ -1,29 +1,28 @@
 'use strict';
 
-// console.log('[debug] oceanScript works!');
-
-// Get reference to the boat element
+// Boat element
 const boat = document.querySelector('.boat');
 
-// Function to animate boat with waves
+// Function to animate boat
 function animateBoat() {
-    // Adjust the boat's vertical position based on wave animations
     const currentTime = Date.now();
-    const waveAmplitude = 50; // Adjust this value based on the wave animation
-    const boatSpeed = 0.002; // Adjust the boat's speed based on your preference
+    // Value based on the wave animation
+    const waveAmplitude = 25;
+    // Boat's speed
+    const boatSpeed = 0.0015;
 
-    // Calculate the boat's new vertical position
+    // Boat's new vertical position
     const newY = waveAmplitude * Math.sin(boatSpeed * currentTime);
 
-    // Apply the new position to the boat
-    boat.style.bottom = `${50 + newY}px`; // Adjust the base bottom position
+    // New boat position
+    boat.style.bottom = `${50 + newY}px`;
 }
 
-// Start the animation loop
+// Start animation loop
 function startAnimationLoop() {
-    setInterval(animateBoat, 10); // Adjust the interval as needed for smoothness
+    setInterval(animateBoat, 10);
 }
 
-// Start the animation loop when the page loads
-window.addEventListener('load', startAnimationLoop);
+// Start animation loop when the page loads
+window.addEventListener('DOMContentLoaded', startAnimationLoop);
 
