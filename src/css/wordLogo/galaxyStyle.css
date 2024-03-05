@@ -9,13 +9,7 @@
     box-sizing: border-box;
     font-family: GuardiansRegular;
 }
-h4{
-    font-size: 0.8rem;
-    color: #fff;
-    text-align: center;
 
-    display: none;
-}
 
 section{
     position: relative;
@@ -26,6 +20,15 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.help-text {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    text-wrap: nowrap;
 }
 
 /* h2 WORD GALAXY */ 
@@ -180,7 +183,7 @@ span{
 
 
 /* ORBIT BALL */
-p{
+p.orbit {
 	margin: 0;
 	width: 20px;
 	height: 20px;
