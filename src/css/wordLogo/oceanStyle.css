@@ -35,7 +35,7 @@ body {
 
 .word-content h2:nth-child(1) {
     color: transparent;
-    -webkit-text-stroke: 6px rgb(27,38,59);
+    -webkit-text-stroke: 4px #F5F9FF;
 }
 
 .word-content h2:nth-child(2) {
@@ -72,6 +72,16 @@ body {
     left: 50%;
     transform: translateX(-50%);
     opacity: .94;
+}
+
+.boat {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: auto;
+    z-index: 2;
 }
 
 @keyframes animate-1 {
